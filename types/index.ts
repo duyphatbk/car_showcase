@@ -1,3 +1,4 @@
+import { LargeNumberLike } from "crypto";
 import { MouseEventHandler } from "react";
 
 export interface CustomButtonProps {
@@ -37,4 +38,8 @@ export interface FilterProps {
     fuel: string;
     limit: number;
     model: string;
+}
+export interface ShowMoreProps {
+    pageNumber: number;
+    isNext: boolean;
 }

@@ -1,5 +1,5 @@
 import { Hero } from "@/components";
-import { SearchBar, CarCard } from "@/components";
+import { SearchBar, CarCard, ShowMore } from "@/components";
 import { fetchCars } from "@/utils";
 
 export default async function Home({searchParams}) {
@@ -38,6 +38,10 @@ export default async function Home({searchParams}) {
                 <CarCard car={car} key={car.city_mpg}/>
               ))}
             </div>
+            <ShowMore 
+              pageNumber={(searchParams.pageNumber || 10)/10}
+              isNext={false}        
+            />
           </section>
         ) : (
           <div>
